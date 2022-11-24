@@ -4,6 +4,13 @@ import { Routes, Route } from "react-router-dom";
 import Nav from "./components/nav/Nav";
 import NotFound from "./components/NotFound";
 import "./App.css";
+import { configureStore } from "@reduxjs/toolkit";
+import productsReducers from "./features/productsSlice";
+const store = configureStore({
+  reducer: {
+    products: productsReducers,
+  },
+});
 
 function App() {
   return (
